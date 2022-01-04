@@ -7,7 +7,8 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/:id', (req, res, next) => {
-  res.send(req.params.id);
+  res.render('photos', { title: req.params.id });
+  // res.send(req.params.id);
 });
 
 module.exports = router;
