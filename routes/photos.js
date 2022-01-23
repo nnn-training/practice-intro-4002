@@ -6,4 +6,10 @@ router.get('/', (req, res, next) => {
   res.send('Some photos');
 });
 
+//入力下文字をWEBページに表示する
+router.get('/:title', (req, res, next) => {
+  res.send(req.params.title);
+});
+
+
 module.exports = router;
