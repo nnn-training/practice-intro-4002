@@ -6,6 +6,7 @@ router.get('/', (req, res, next) => {
   res.send('Some photos');
 });
 
+//パスの文字列をtitleで受け取っている
 router.get('/:title', (req, res, next) => {
   res.send(req.params.title);
 });
