@@ -21,7 +21,7 @@ app.use(secureHeaders());
 
 app.route("/", indexRouter);
 app.route("/users", usersRouter);
-app.route("/photos", photosRouter);
+app.route("/photos/*", photosRouter);
 
 app.notFound((c) => {
   return c.html(
