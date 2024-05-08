@@ -26,6 +26,9 @@ app.route("/users", usersRouter);
 app.route("/photos", photosRouter);
 
 app.notFound((c) => {
+  // 最後が/で終わる404の場合は/なしにリダイレクト
+  if(c.req.path.endsWith('/')) return c.redirect(c.req.path.slice(0, -1));
+
   return c.html(
     html`
       <!doctype html>
