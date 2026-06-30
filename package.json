@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=\"development\" node --watch src/app.js"
+    "start": "NODE_ENV=\"development\" npx nodemon -L src/app.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.14.2",
