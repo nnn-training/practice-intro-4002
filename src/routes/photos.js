@@ -7,3 +7,8 @@ app.get("/", (c) => {
 });
 
 module.exports = app;
+
+app.get(`/:title`, (c) => {
+  const title = c.req.param(`title`);
+  return c.text(title);
+});
